@@ -11,9 +11,17 @@ config_version=5
 [application]
 
 config/name="Lenguaje3-Sisifo"
-run/main_scene="res://Scenes/prueba.tscn"
+run/main_scene="uid://caxjxiqy5vjpk"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Globales="*res://Scripts/Globales/Globales.gd"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [editor_plugins]
 

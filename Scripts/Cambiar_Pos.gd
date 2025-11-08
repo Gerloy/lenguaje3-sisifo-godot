@@ -8,7 +8,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	print(target_server.incoming_messages);
+	#print(target_server.incoming_messages);
 	if target_server.incoming_messages.has(osc_address):
 		#print(target_server.incoming_messages);
 		pj.global_position = Vector3(target_server.incoming_messages[osc_address][0],pj.global_position.y,pj.global_position.z);
