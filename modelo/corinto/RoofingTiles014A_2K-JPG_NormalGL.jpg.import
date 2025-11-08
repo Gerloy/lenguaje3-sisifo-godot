@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjknplt6go3yh"
+uid="uid://cteogigm4tc62"
 path.s3tc="res://.godot/imported/RoofingTiles014A_2K-JPG_NormalGL.jpg-6e7eb3d00269fac2799292452001c11f.s3tc.ctex"
 path.etc2="res://.godot/imported/RoofingTiles014A_2K-JPG_NormalGL.jpg-6e7eb3d00269fac2799292452001c11f.etc2.ctex"
 metadata={
@@ -28,7 +28,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://modelo/corinto/gltf/RoofingTiles014A_2K-JPG_NormalGL.jpg"
+roughness/src_normal="res://modelo/corinto/RoofingTiles014A_2K-JPG_NormalGL.jpg"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

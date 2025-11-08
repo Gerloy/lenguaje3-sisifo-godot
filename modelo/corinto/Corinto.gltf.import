@@ -3,12 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c4vbkmudgwajx"
-valid=false
+uid="uid://df4sy7pgremtg"
+path="res://.godot/imported/Corinto.gltf-227fad0403de6f296caf3cb6191a0d49.scn"
 
 [deps]
 
 source_file="res://modelo/corinto/Corinto.gltf"
+dest_files=["res://.godot/imported/Corinto.gltf-227fad0403de6f296caf3cb6191a0d49.scn"]
 
 [params]
 

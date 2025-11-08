@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcae57de4mvh0"
+uid="uid://1ymekm43ci2"
 path.s3tc="res://.godot/imported/Plaster001_2K-JPG_NormalGL.jpg-279e998291e0d908a032eeacaf65c0cf.s3tc.ctex"
 path.etc2="res://.godot/imported/Plaster001_2K-JPG_NormalGL.jpg-279e998291e0d908a032eeacaf65c0cf.etc2.ctex"
 metadata={
@@ -28,7 +28,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://modelo/corinto/gltf/Plaster001_2K-JPG_NormalGL.jpg"
+roughness/src_normal="res://modelo/corinto/Plaster001_2K-JPG_NormalGL.jpg"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2
