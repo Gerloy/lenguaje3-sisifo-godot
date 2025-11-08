@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://caxjxiqy5vjpk"]
+
+[ext_resource type="Script" path="res://addons/cardboard_vr/scripts/cardboard_vr_camera.gd" id="1_aun8b"]
+[ext_resource type="PackedScene" uid="uid://dcujk4sgval7g" path="res://modelo/mapa.fbx" id="2_7fyyh"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_x7o8p"]
+
+[node name="Prueba" type="Node3D"]
+
+[node name="mapa" parent="." instance=ExtResource("2_7fyyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.88755, -8.39376, 0.525324)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.98524, 0)
+
+[node name="CardboardVRCamera3D" type="Camera3D" parent="CharacterBody3D"]
+script = ExtResource("1_aun8b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("SphereShape3D_x7o8p")
