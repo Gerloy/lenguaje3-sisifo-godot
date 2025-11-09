@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://caxjxiqy5vjpk"]
+
+[ext_resource type="Script" uid="uid://s5ugrpk4rfw4" path="res://addons/cardboard_vr/scripts/cardboard_vr_camera.gd" id="1_ixo6g"]
+[ext_resource type="Script" uid="uid://do7vdefcs6tmm" path="res://Scripts/Cambiar_Pos.gd" id="2_qnoio"]
+[ext_resource type="Script" uid="uid://ckalovjb1exn" path="res://Scripts/recibidor_z.gd" id="3_gffnd"]
+[ext_resource type="Script" uid="uid://c5qen6x4qlwpp" path="res://addons/godOSC/scripts/OSCServer.gd" id="4_fgk7x"]
+[ext_resource type="PackedScene" uid="uid://qb3xg6mjwdj8" path="res://modelo/corinto.tscn" id="5_60j7f"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_x7o8p"]
+
+[node name="Prueba" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.7692548, 0.5812194, -0.2653886, 0.15269656, -0.5705516, -0.8069416, -0.6204281, 0.58021975, -0.52764964, 55.104115, 49.22081, 64.14933)
+directional_shadow_split_1 = 0.172
+directional_shadow_fade_start = 0.192
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.45153, 25.033726, 73.051094)
+
+[node name="CardboardVRCamera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.116817, 0, -10.514206)
+script = ExtResource("1_ixo6g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+physics_interpolation_mode = 2
+shape = SubResource("SphereShape3D_x7o8p")
+disabled = true
+
+[node name="AudioListener3D" type="AudioListener3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.45153, -14.911281, -73.051094)
+
+[node name="RecibidorX" type="Node" parent="CharacterBody3D" node_paths=PackedStringArray("target_server")]
+script = ExtResource("2_qnoio")
+target_server = NodePath("../../recibe_posicion/OSCServer")
+osc_address = "/posx"
+metadata/_custom_type_script = "uid://cmwfmotwtrkgg"
+
+[node name="RecibidorZ" type="Node" parent="CharacterBody3D" node_paths=PackedStringArray("target_server")]
+script = ExtResource("3_gffnd")
+target_server = NodePath("../../recibe_posicion/OSCServer")
+osc_address = "/posz"
+metadata/_custom_type_script = "uid://cmwfmotwtrkgg"
+
+[node name="recibe_posicion" type="Node" parent="."]
+
+[node name="OSCServer" type="Node" parent="recibe_posicion"]
+script = ExtResource("4_fgk7x")
+port = 9000
+metadata/_custom_type_script = "uid://c5qen6x4qlwpp"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+
+[node name="Corinto" parent="." instance=ExtResource("5_60j7f")]

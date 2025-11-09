@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://tr23rv1xao3l"]
+
+[ext_resource type="VideoStream" uid="uid://bgidxxp18xmot" path="res://modelo/prueba-video.ogv" id="1_ypav8"]
+
+[node name="PruebaVideo" type="Node2D"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.6, 0.6)
+stream = ExtResource("1_ypav8")
+autoplay = true
