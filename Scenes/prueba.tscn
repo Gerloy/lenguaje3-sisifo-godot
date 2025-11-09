@@ -1,9 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://caxjxiqy5vjpk"]
+[gd_scene load_steps=8 format=3 uid="uid://caxjxiqy5vjpk"]
 
-[ext_resource type="Script" path="res://addons/cardboard_vr/scripts/cardboard_vr_camera.gd" id="1_aun8b"]
+[ext_resource type="Script" uid="uid://s5ugrpk4rfw4" path="res://addons/cardboard_vr/scripts/cardboard_vr_camera.gd" id="1_aun8b"]
 [ext_resource type="PackedScene" uid="uid://dcujk4sgval7g" path="res://modelo/mapa.fbx" id="2_7fyyh"]
+[ext_resource type="Script" uid="uid://d0p7l0j3jovj4" path="res://Scenes/mesh_instance_3d.gd" id="3_g4thu"]
+[ext_resource type="VideoStream" uid="uid://bhsda24dsw5yh" path="res://videos/videoplayback.ogv" id="3_ym7p0"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_x7o8p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jtunb"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_g4thu"]
 
 [node name="Prueba" type="Node3D"]
 
@@ -14,7 +20,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.88755, -8.39376, 0.525324)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.98524, 0)
 
 [node name="CardboardVRCamera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1813922, 4.9807696)
 script = ExtResource("1_aun8b")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.80474, 3.1941786)
 shape = SubResource("SphereShape3D_x7o8p")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.023402743, -0.9997261, 0, 0.9997261, -0.023402743, 0, 1.6744791, 0)
+material_override = SubResource("StandardMaterial3D_jtunb")
+mesh = SubResource("PlaneMesh_g4thu")
+script = ExtResource("3_g4thu")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("3_ym7p0")
+volume_db = -80.0
+autoplay = true
+expand = true

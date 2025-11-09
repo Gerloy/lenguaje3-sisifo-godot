@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://h6jifm0mtc1q"]
+
+[ext_resource type="Script" uid="uid://cll8ukrmvju55" path="res://Scenes/mesh_instance_3d2.gd" id="1_qrvwk"]
+[ext_resource type="VideoStream" uid="uid://bhsda24dsw5yh" path="res://videos/videoplayback.ogv" id="2_o16hi"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_o16hi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qrvwk"]
+
+[node name="PruebadeVideo" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.043776304, 0.9990414, 0, -0.9990414, 0.043776304, 0, -1.0920402, 0)
+mesh = SubResource("CylinderMesh_o16hi")
+surface_material_override/0 = SubResource("StandardMaterial3D_qrvwk")
+script = ExtResource("1_qrvwk")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+visible = false
+offset_right = 1159.0
+offset_bottom = 652.0
+stream = ExtResource("2_o16hi")
+volume_db = -80.0
+autoplay = true
+loop = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.018656438, 0.99982595, 0, -0.99982595, 0.018656438, 0, 1.4757609, 0)
