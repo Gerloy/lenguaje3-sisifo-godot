@@ -22,6 +22,7 @@ Globales="*res://Scripts/Globales/Globales.gd"
 [display]
 
 window/stretch/mode="viewport"
+window/handheld/orientation=2
 
 [editor_plugins]
 

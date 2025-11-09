@@ -24,7 +24,7 @@ var LeftEyeSubViewPort : SubViewport = SubViewport.new()
 var RightEyeSubViewPort : SubViewport = SubViewport.new()
 var parent : CharacterBody3D = get_parent()
 
-func _input(event):	
+func _input(event):
 	if not Active:
 		return
 		
