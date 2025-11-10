@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cnngmvvdfvlea"
+path="res://.godot/imported/sonido final voz.mp3-42d3c6bc442fd92ae25a9d49a8f43363.mp3str"
+
+[deps]
+
+source_file="res://audios/narraciones/estereo-20251110T200707Z-1-001/estereo/sonido final voz.mp3"
+dest_files=["res://.godot/imported/sonido final voz.mp3-42d3c6bc442fd92ae25a9d49a8f43363.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

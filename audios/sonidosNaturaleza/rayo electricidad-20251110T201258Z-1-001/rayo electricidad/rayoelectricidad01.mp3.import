@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cfpsawpv2yg22"
+path="res://.godot/imported/rayoelectricidad01.mp3-135208d3fcbf4a93b882e1047d37b8d3.mp3str"
+
+[deps]
+
+source_file="res://audios/sonidosNaturaleza/rayo electricidad-20251110T201258Z-1-001/rayo electricidad/rayoelectricidad01.mp3"
+dest_files=["res://.godot/imported/rayoelectricidad01.mp3-135208d3fcbf4a93b882e1047d37b8d3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
