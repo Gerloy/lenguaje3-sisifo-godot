@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwwm1vf4pcuv2"
-path.s3tc="res://.godot/imported/El texto del párrafo (1).png-a0197c00540a3c0be2980eca475e6e91.s3tc.ctex"
-path.etc2="res://.godot/imported/El texto del párrafo (1).png-a0197c00540a3c0be2980eca475e6e91.etc2.ctex"
+uid="uid://2a1si6i2203b"
+path.s3tc="res://.godot/imported/TanatosEncadenado.png-b938f645e7362778eb5797fe2640d267.s3tc.ctex"
+path.etc2="res://.godot/imported/TanatosEncadenado.png-b938f645e7362778eb5797fe2640d267.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Images/cinematicas/iloveimg-background-removed/El texto del párrafo (1).png"
-dest_files=["res://.godot/imported/El texto del párrafo (1).png-a0197c00540a3c0be2980eca475e6e91.s3tc.ctex", "res://.godot/imported/El texto del párrafo (1).png-a0197c00540a3c0be2980eca475e6e91.etc2.ctex"]
+source_file="res://Images/cinematicas/iloveimg-background-removed/TanatosEncadenado.png"
+dest_files=["res://.godot/imported/TanatosEncadenado.png-b938f645e7362778eb5797fe2640d267.s3tc.ctex", "res://.godot/imported/TanatosEncadenado.png-b938f645e7362778eb5797fe2640d267.etc2.ctex"]
 
 [params]
 
