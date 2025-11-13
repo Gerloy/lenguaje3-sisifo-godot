@@ -21,8 +21,9 @@ func _ready():
 			mesh.material_override.albedo_color = Color(1, 1, 1, 0)
 		else:
 			# Aseguramos que el material sea transparente
-			mesh.material_override.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+			#mesh.material_override.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
 			set_opacidad(mesh, 0.0)
+	#ejecutar_siguiente();
 
 func _process(delta):
 	if activo and indice_actual < imagenes.size():

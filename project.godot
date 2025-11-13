@@ -16,6 +16,10 @@ config/use_custom_user_dir=true
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Globales="*res://Scripts/Globales/Globales.gd"
+
 [display]
 
 window/handheld/orientation=2

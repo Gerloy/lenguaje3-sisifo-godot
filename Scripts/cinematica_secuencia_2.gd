@@ -79,13 +79,14 @@ func ocultar_mesh_y_cambiar() -> void:
 
 func _on_fade_out_finished() -> void:
 	mesh.visible = false
-	print("➡️ Pasando a la siguiente cinemática (final)...")
+	#print("➡️ Pasando a la siguiente cinemática (final)...")
 
 	var siguiente = get_node_or_null("../CinematicaSecuenciaFinal1")
-	if siguiente and siguiente.has_method("ejecutar_siguiente"):
-		siguiente.ejecutar_siguiente()
-	else:
-		print("⚠ No se encontró la siguiente escena.")
+	#if siguiente and siguiente.has_method("ejecutar_siguiente"):
+	siguiente.ejecutar_siguiente()
+	apareciendo = false;
+	#else:
+	#	print("⚠ No se encontró la siguiente escena.")
 
 
 func _process(delta: float) -> void:

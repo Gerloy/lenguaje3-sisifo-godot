@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://rm7c4iaqkw2x"]
+
+[ext_resource type="PackedScene" uid="uid://b4ii6kjm43c0d" path="res://modelo/Castigo/castigo.gltf" id="1_rgj08"]
+
+[node name="castigo" instance=ExtResource("1_rgj08")]

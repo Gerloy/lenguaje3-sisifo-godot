@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://cll8ukrmvju55" path="res://Scripts/mesh_instance_3d2.gd" id="1_qrvwk"]
 [ext_resource type="VideoStream" uid="uid://bhsda24dsw5yh" path="res://videos/videoplayback.ogv" id="2_o16hi"]
 
-
 [sub_resource type="CylinderMesh" id="CylinderMesh_o16hi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qrvwk"]

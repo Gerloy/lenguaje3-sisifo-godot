@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://qb3xg6mjwdj8"]
+[gd_scene load_steps=34 format=3 uid="uid://qb3xg6mjwdj8"]
 
 [ext_resource type="PackedScene" uid="uid://df4sy7pgremtg" path="res://modelo/corinto/Corinto.gltf" id="1_0jv8j"]
 [ext_resource type="Texture2D" uid="uid://ogb52alvv1uq" path="res://Images/cinematicas/iloveimg-background-removed/El texto del párrafo.png" id="2_4lwk7"]
@@ -14,9 +14,11 @@
 [ext_resource type="AudioStream" uid="uid://bpldvf7eovbtb" path="res://audios/sonidosObjetos/cadena00.mp3" id="9_kovkq"]
 [ext_resource type="AudioStream" uid="uid://ca15kj8ge3w7" path="res://audios/sonidosNaturaleza/rayo electricidad-20251110T201258Z-1-001/rayo electricidad/rayoelectricidad00.mp3" id="10_ipdnr"]
 [ext_resource type="Script" uid="uid://dq1b68ixiss1k" path="res://Scripts/cinematica_secuencia_final_1.gd" id="14_3k8xy"]
-[ext_resource type="Texture2D" uid="uid://2a1si6i2203b" path="res://Images/cinematicas/iloveimg-background-removed/TanatosEncadenado.png" id="15_egvs4"]
+[ext_resource type="Texture2D" uid="uid://dfhekmk62pko3" path="res://Images/cinematicas/iloveimg-background-removed/cinamatica2/00.png" id="15_s5kjn"]
 [ext_resource type="AudioStream" uid="uid://b63mv8135fdy0" path="res://audios/narraciones/estereo-20251110T200707Z-1-001/estereo/VozEterea1.mp3" id="16_a6lnt"]
+[ext_resource type="Texture2D" uid="uid://ha2n4msaqhlb" path="res://Images/cinematicas/iloveimg-background-removed/cinamatica2/01.png" id="16_i2awc"]
 [ext_resource type="AudioStream" uid="uid://cbevs57ci7o8e" path="res://audios/sonidosObjetos/rompecadena.mp3" id="17_5pkxa"]
+[ext_resource type="Texture2D" uid="uid://djx8wmxr0lth2" path="res://Images/cinematicas/iloveimg-background-removed/cinamatica2/02.png" id="17_qxyme"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_fn1vv"]
 size = Vector2(30, 30)
@@ -52,7 +54,19 @@ size = Vector2(30, 30)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5pkxa"]
 transparency = 1
-albedo_texture = ExtResource("15_egvs4")
+albedo_texture = ExtResource("15_s5kjn")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_41bbp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_avt8o"]
+transparency = 1
+albedo_texture = ExtResource("16_i2awc")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4udpr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_imsjt"]
+transparency = 1
+albedo_texture = ExtResource("17_qxyme")
 
 [node name="Corinto" instance=ExtResource("1_0jv8j")]
 
@@ -80,6 +94,7 @@ stream = ExtResource("5_ilc4o")
 visible = false
 
 [node name="CinematicaControl_2" type="Node3D" parent="." index="84"]
+visible = false
 script = ExtResource("5_pyur5")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CinematicaControl_2" index="0"]
@@ -108,8 +123,8 @@ volume_db = 5.0
 
 [node name="cinematicaSeqMadre" type="Node3D" parent="." index="85"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.167984, 0, 0)
+visible = false
 script = ExtResource("7_k3jj1")
-ruta_siguiente = NodePath("../CinematicaControl_2")
 
 [node name="Mesh1" type="MeshInstance3D" parent="cinematicaSeqMadre" index="0"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 5.3595734, 24.338924, 28.475323)
@@ -141,6 +156,7 @@ volume_db = 14.822
 
 [node name="CinematicaSecuenciaFinal1" type="Node3D" parent="." index="86" node_paths=PackedStringArray("imagenes", "audios")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.64113, 23.73177, 31.902931)
+visible = false
 script = ExtResource("14_3k8xy")
 imagenes = [NodePath("MeshInstance3D"), NodePath("MeshInstance3D2"), NodePath("MeshInstance3D3")]
 audios = [NodePath("AudioStreamPlayer3D"), NodePath("AudioStreamPlayer3D2"), NodePath("AudioStreamPlayer3D3")]
@@ -153,10 +169,14 @@ skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_5pkxa")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="CinematicaSecuenciaFinal1" index="1"]
+mesh = SubResource("PlaneMesh_41bbp")
 skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_avt8o")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="CinematicaSecuenciaFinal1" index="2"]
+mesh = SubResource("PlaneMesh_4udpr")
 skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_imsjt")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="CinematicaSecuenciaFinal1" index="3"]
 stream = ExtResource("16_a6lnt")

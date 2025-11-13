@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://caxjxiqy5vjpk"]
+[gd_scene load_steps=8 format=3 uid="uid://caxjxiqy5vjpk"]
 
 [ext_resource type="Script" uid="uid://s5ugrpk4rfw4" path="res://addons/cardboard_vr/scripts/cardboard_vr_camera.gd" id="1_ixo6g"]
-[ext_resource type="Script" uid="uid://do7vdefcs6tmm" path="res://Scripts/Cambiar_Pos.gd" id="2_qnoio"]
-[ext_resource type="Script" uid="uid://ckalovjb1exn" path="res://Scripts/recibidor_z.gd" id="3_gffnd"]
+[ext_resource type="Script" uid="uid://do7vdefcs6tmm" path="res://Scripts/OSC/Cambiar_Pos.gd" id="2_qnoio"]
+[ext_resource type="Script" uid="uid://ckalovjb1exn" path="res://Scripts/OSC/recibidor_z.gd" id="3_gffnd"]
 [ext_resource type="Script" uid="uid://c5qen6x4qlwpp" path="res://addons/godOSC/scripts/OSCServer.gd" id="4_fgk7x"]
+[ext_resource type="Script" uid="uid://cmsfbjl6la3xs" path="res://Scripts/OSC/Recibidor_Botones.gd" id="4_qnoio"]
 [ext_resource type="PackedScene" uid="uid://qb3xg6mjwdj8" path="res://modelo/corinto.tscn" id="5_60j7f"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_x7o8p"]
@@ -42,6 +43,12 @@ target_server = NodePath("../../recibe_posicion/OSCServer")
 osc_address = "/posz"
 metadata/_custom_type_script = "uid://cmwfmotwtrkgg"
 
+[node name="Recibidor_Botones" type="Node" parent="CharacterBody3D" node_paths=PackedStringArray("target_server")]
+script = ExtResource("4_qnoio")
+target_server = NodePath("../../recibe_posicion/OSCServer")
+osc_address = "/decision"
+metadata/_custom_type_script = "uid://cmwfmotwtrkgg"
+
 [node name="recibe_posicion" type="Node" parent="."]
 
 [node name="OSCServer" type="Node" parent="recibe_posicion"]
@@ -52,3 +59,4 @@ metadata/_custom_type_script = "uid://c5qen6x4qlwpp"
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 
 [node name="Corinto" parent="." instance=ExtResource("5_60j7f")]
+visible = false

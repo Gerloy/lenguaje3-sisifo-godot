@@ -9,7 +9,7 @@ extends Node3D
 @export var velocidad: float = 0.5
 
 # 🔹 Nombre o ruta del siguiente nodo de cinemática
-@export var ruta_siguiente: NodePath = "../CinematicaSecuencia2"
+#@export var ruta_siguiente: NodePath = "../CinematicaSecuencia2"
 
 # ===========================
 # 🎞️ REFERENCIAS A NODOS

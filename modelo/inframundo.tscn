@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://brksdsf84lgr4"]
+
+[ext_resource type="PackedScene" uid="uid://dbj3tpcdb4kg5" path="res://modelo/Inframundo/Inframundo.gltf" id="1_husgm"]
+
+[node name="Inframundo" instance=ExtResource("1_husgm")]
