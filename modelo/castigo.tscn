@@ -1,5 +1,18 @@
 [gd_scene load_steps=2 format=3 uid="uid://rm7c4iaqkw2x"]
 
-[ext_resource type="PackedScene" uid="uid://b4ii6kjm43c0d" path="res://modelo/Castigo/castigo.gltf" id="1_rgj08"]
+[ext_resource type="PackedScene" uid="uid://31u2gssdwnm4" path="res://modelo/Castigo/castigo.gltf" id="1_rgj08"]
 
 [node name="castigo" instance=ExtResource("1_rgj08")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -92.634, 0, -115.111)
+
+[node name="textura_001" parent="." index="0"]
+visible = false
+
+[node name="Montañas" parent="." index="6"]
+visible = false
+
+[node name="Landscape_005" parent="." index="7"]
+visible = false
+
+[node name="columnas" parent="." index="15"]
+visible = false

@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwj606ju0e0w6"
+uid="uid://catlq8acq0dbo"
 path.s3tc="res://.godot/imported/Marble009_1K-JPG_NormalGL.jpg-676364f39c2317bec38b2d6642c63dfc.s3tc.ctex"
 path.etc2="res://.godot/imported/Marble009_1K-JPG_NormalGL.jpg-676364f39c2317bec38b2d6642c63dfc.etc2.ctex"
 metadata={
@@ -28,7 +28,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://modelo/Inframundo/Marble009_1K-JPG_NormalGL.jpg"
+roughness/src_normal="res://modelo/Inframundo/gltf-20251116T222216Z-1-001/gltf/Marble009_1K-JPG_NormalGL.jpg"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

@@ -7,6 +7,8 @@ var cinematicas:Array[String];
 var cine;
 var cine_activada = false;
 
+enum ESTADOS {cinematica_0, trans_1, corinto, trans_2, cinematica_1, trans_3, inframundo, trans_4, cinematica_2, castigo,  trans_5, final};
+
 var estado:int = 0;
 @export var modelo_actual:Node3D; #Por ahora
 
@@ -17,13 +19,11 @@ func _ready() -> void:
 	mapas.append("res://modelo/inframundo.tscn");
 	mapas.append("res://modelo/castigo.tscn");
 	map_activado = true;
-	#var map_scn:PackedScene = load(mapas[0]);
-	map = load(mapas[0]).instantiate();
-	get_node("/root/Prueba").add_child(map);
-	pass # Replace with function body.
+	#map = load(mapas[0]).instantiate();
+	#get_node("/root/Prueba").add_child(map);
+	pass
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
 
@@ -32,6 +32,7 @@ func cambiarACinematica():
 func cambiarEstado():
 	estado+=1;
 	map.queue_free();
+	cine.queue_free();
 	map = load(mapas[estado]).instantiate();
 	get_node("/root/Prueba").add_child(map);
 	#if map_activado:

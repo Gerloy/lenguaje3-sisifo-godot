@@ -1,6 +1,6 @@
 {
 	"asset":{
-		"generator":"Khronos glTF Blender I/O v4.5.49",
+		"generator":"Khronos glTF Blender I/O v4.5.48",
 		"version":"2.0"
 	},
 	"extensionsUsed":[
@@ -449,10 +449,16 @@
 		{
 			"doubleSided":true,
 			"name":"Material.007",
+			"normalTexture":{
+				"index":0
+			},
 			"pbrMetallicRoughness":{
+				"baseColorTexture":{
+					"index":1
+				},
 				"metallicFactor":0,
 				"metallicRoughnessTexture":{
-					"index":0
+					"index":2
 				}
 			}
 		},
@@ -472,7 +478,7 @@
 						]
 					}
 				},
-				"index":1
+				"index":3
 			},
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -488,7 +494,7 @@
 							]
 						}
 					},
-					"index":2
+					"index":4
 				},
 				"metallicFactor":0,
 				"metallicRoughnessTexture":{
@@ -504,27 +510,39 @@
 							]
 						}
 					},
-					"index":3
+					"index":5
 				}
 			}
 		},
 		{
 			"doubleSided":true,
 			"name":"suelo-roca",
+			"normalTexture":{
+				"index":6
+			},
 			"pbrMetallicRoughness":{
+				"baseColorTexture":{
+					"index":7
+				},
 				"metallicFactor":0,
 				"metallicRoughnessTexture":{
-					"index":4
+					"index":8
 				}
 			}
 		},
 		{
 			"doubleSided":true,
 			"name":"suelo-roca.001",
+			"normalTexture":{
+				"index":9
+			},
 			"pbrMetallicRoughness":{
+				"baseColorTexture":{
+					"index":10
+				},
 				"metallicFactor":0,
 				"metallicRoughnessTexture":{
-					"index":5
+					"index":11
 				}
 			}
 		}
@@ -859,18 +877,52 @@
 		},
 		{
 			"sampler":0,
-			"source":0
+			"source":4
 		},
 		{
 			"sampler":0,
-			"source":0
+			"source":5
+		},
+		{
+			"sampler":0,
+			"source":6
+		},
+		{
+			"sampler":0,
+			"source":7
+		},
+		{
+			"sampler":0,
+			"source":8
+		},
+		{
+			"sampler":0,
+			"source":6
+		},
+		{
+			"sampler":0,
+			"source":7
+		},
+		{
+			"sampler":0,
+			"source":8
 		}
 	],
 	"images":[
 		{
+			"mimeType":"image/jpeg",
+			"name":"Rock060_2K-JPG_NormalGL",
+			"uri":"Rock060_2K-JPG_NormalGL.jpg"
+		},
+		{
+			"mimeType":"image/jpeg",
+			"name":"Rock060_2K-JPG_Color",
+			"uri":"Rock060_2K-JPG_Color.jpg"
+		},
+		{
 			"mimeType":"image/png",
-			"name":"Image",
-			"uri":"Image.png"
+			"name":"Rock060_2K-JPG_Roughness",
+			"uri":"Rock060_2K-JPG_Roughness.png"
 		},
 		{
 			"mimeType":"image/jpeg",
@@ -886,6 +938,21 @@
 			"mimeType":"image/png",
 			"name":"Marble009_1K-JPG_Roughness",
 			"uri":"Marble009_1K-JPG_Roughness.png"
+		},
+		{
+			"mimeType":"image/jpeg",
+			"name":"Rock058_2K-JPG_NormalGL",
+			"uri":"Rock058_2K-JPG_NormalGL.jpg"
+		},
+		{
+			"mimeType":"image/jpeg",
+			"name":"Rock058_2K-JPG_Color",
+			"uri":"Rock058_2K-JPG_Color.jpg"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"Rock058_2K-JPG_Roughness",
+			"uri":"Rock058_2K-JPG_Roughness.png"
 		}
 	],
 	"accessors":[

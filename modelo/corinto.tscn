@@ -1,24 +1,24 @@
 [gd_scene load_steps=34 format=3 uid="uid://qb3xg6mjwdj8"]
 
 [ext_resource type="PackedScene" uid="uid://df4sy7pgremtg" path="res://modelo/corinto/Corinto.gltf" id="1_0jv8j"]
-[ext_resource type="Texture2D" uid="uid://ogb52alvv1uq" path="res://Images/cinematicas/iloveimg-background-removed/El texto del párrafo.png" id="2_4lwk7"]
+[ext_resource type="Texture2D" uid="uid://ogb52alvv1uq" path="res://Images/cinematicas/El texto del párrafo.png" id="2_4lwk7"]
 [ext_resource type="AudioStream" uid="uid://coymeymymtci" path="res://audios/narraciones/estereo-20251110T200707Z-1-001/estereo/Zeus1.2.mp3" id="4_ilc4o"]
 [ext_resource type="AudioStream" uid="uid://cfpsawpv2yg22" path="res://audios/sonidosNaturaleza/rayo electricidad-20251110T201258Z-1-001/rayo electricidad/rayoelectricidad01.mp3" id="5_ilc4o"]
 [ext_resource type="Script" uid="uid://baxwh3y7lv26s" path="res://Scripts/cinematica_secuencia_2.gd" id="5_pyur5"]
-[ext_resource type="Texture2D" uid="uid://bm3rcjgspe3um" path="res://Images/cinematicas/iloveimg-background-removed/Tanatos.png" id="6_fc0bw"]
-[ext_resource type="Texture2D" uid="uid://cyonm1mv11abp" path="res://Images/cinematicas/iloveimg-background-removed/ZeusYTanatos.png" id="6_pyur5"]
+[ext_resource type="Texture2D" uid="uid://bm3rcjgspe3um" path="res://Images/cinematicas/Tanatos.png" id="6_fc0bw"]
+[ext_resource type="Texture2D" uid="uid://cyonm1mv11abp" path="res://Images/cinematicas/ZeusYTanatos.png" id="6_pyur5"]
 [ext_resource type="Script" uid="uid://1u2x13o1i4p8" path="res://Scripts/CinematicaSecuencia1.gd" id="7_k3jj1"]
 [ext_resource type="AudioStream" uid="uid://dbwulk2l00sms" path="res://audios/sonidosObjetos/reloj00.mp3" id="8_kr7hg"]
 [ext_resource type="AudioStream" uid="uid://dkmool3ptaocj" path="res://audios/narraciones/estereo-20251110T200707Z-1-001/estereo/Tánatos1.mp3" id="9_8yvqu"]
-[ext_resource type="Texture2D" uid="uid://dwwm1vf4pcuv2" path="res://Images/cinematicas/iloveimg-background-removed/El texto del párrafo (1).png" id="9_ipdnr"]
+[ext_resource type="Texture2D" uid="uid://dwwm1vf4pcuv2" path="res://Images/cinematicas/El texto del párrafo (1).png" id="9_ipdnr"]
 [ext_resource type="AudioStream" uid="uid://bpldvf7eovbtb" path="res://audios/sonidosObjetos/cadena00.mp3" id="9_kovkq"]
 [ext_resource type="AudioStream" uid="uid://ca15kj8ge3w7" path="res://audios/sonidosNaturaleza/rayo electricidad-20251110T201258Z-1-001/rayo electricidad/rayoelectricidad00.mp3" id="10_ipdnr"]
 [ext_resource type="Script" uid="uid://dq1b68ixiss1k" path="res://Scripts/cinematica_secuencia_final_1.gd" id="14_3k8xy"]
-[ext_resource type="Texture2D" uid="uid://dfhekmk62pko3" path="res://Images/cinematicas/iloveimg-background-removed/cinamatica2/00.png" id="15_s5kjn"]
+[ext_resource type="Texture2D" uid="uid://dfhekmk62pko3" path="res://Images/cinematicas/cinamatica2/00.png" id="15_s5kjn"]
 [ext_resource type="AudioStream" uid="uid://b63mv8135fdy0" path="res://audios/narraciones/estereo-20251110T200707Z-1-001/estereo/VozEterea1.mp3" id="16_a6lnt"]
-[ext_resource type="Texture2D" uid="uid://ha2n4msaqhlb" path="res://Images/cinematicas/iloveimg-background-removed/cinamatica2/01.png" id="16_i2awc"]
+[ext_resource type="Texture2D" uid="uid://ha2n4msaqhlb" path="res://Images/cinematicas/cinamatica2/01.png" id="16_i2awc"]
 [ext_resource type="AudioStream" uid="uid://cbevs57ci7o8e" path="res://audios/sonidosObjetos/rompecadena.mp3" id="17_5pkxa"]
-[ext_resource type="Texture2D" uid="uid://djx8wmxr0lth2" path="res://Images/cinematicas/iloveimg-background-removed/cinamatica2/02.png" id="17_qxyme"]
+[ext_resource type="Texture2D" uid="uid://djx8wmxr0lth2" path="res://Images/cinematicas/cinamatica2/02.png" id="17_qxyme"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_fn1vv"]
 size = Vector2(30, 30)
@@ -71,7 +71,6 @@ albedo_texture = ExtResource("17_qxyme")
 [node name="Corinto" instance=ExtResource("1_0jv8j")]
 
 [node name="Node3D" type="Node3D" parent="." index="82"]
-visible = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -48.793, 27.368, 22.951)

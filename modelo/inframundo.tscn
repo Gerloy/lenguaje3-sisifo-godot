@@ -1,5 +1,21 @@
 [gd_scene load_steps=2 format=3 uid="uid://brksdsf84lgr4"]
 
-[ext_resource type="PackedScene" uid="uid://dbj3tpcdb4kg5" path="res://modelo/Inframundo/Inframundo.gltf" id="1_husgm"]
+[ext_resource type="PackedScene" uid="uid://bdb8uuuc6kbvw" path="res://modelo/Inframundo/Inframundo.gltf" id="1_husgm"]
 
 [node name="Inframundo" instance=ExtResource("1_husgm")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -100.121, -76.949, -28.472)
+
+[node name="Montañas" parent="." index="6"]
+visible = false
+
+[node name="Landscape_005" parent="." index="7"]
+visible = false
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="22"]
+transform = Transform3D(1, 0, 0, 0, 0.681, 0, 0, 0, 0.194, 16.580967, 104.08943, 84.37607)
+light_energy = 16.0
+light_indirect_energy = 2.94
+light_size = 0.549
+light_specular = 3.817
+light_bake_mode = 1
+spot_angle = 66.09375
