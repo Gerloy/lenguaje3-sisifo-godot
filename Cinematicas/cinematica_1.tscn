@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://bfsm8hy6fayxw"]
+
+[ext_resource type="Script" uid="uid://1ssblbcx4egk" path="res://Scripts/Cinematicas/Cinematica.gd" id="1_d3xyb"]
+[ext_resource type="Texture2D" uid="uid://d1amsa0qg82yb" path="res://Images/cinematicas/cinematica 0/00.png" id="2_riwxi"]
+[ext_resource type="AudioStream" uid="uid://da4vanice4ahl" path="res://audios/narraciones/1-Zeus.mp3" id="3_s3x61"]
+[ext_resource type="AudioStream" uid="uid://ctoila6n3qa5f" path="res://audios/narraciones/2-Tánatos.mp3" id="4_5q8xj"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6l66d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cuwxh"]
+transparency = 1
+albedo_texture = ExtResource("2_riwxi")
+
+[node name="Cinematica1" type="Node3D"]
+script = ExtResource("1_d3xyb")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(32, 0, 0, 0, -1.3987644e-06, -32, 0, 32, -1.3987644e-06, -61.914417, 21.292458, 18.256565)
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_6l66d")
+surface_material_override/0 = SubResource("StandardMaterial3D_cuwxh")
+
+[node name="Audios" type="Node" parent="."]
+
+[node name="AudioZeus" type="AudioStreamPlayer3D" parent="Audios"]
+stream = ExtResource("3_s3x61")
+
+[node name="AudioThanatos" type="AudioStreamPlayer3D" parent="Audios"]
+stream = ExtResource("4_5q8xj")

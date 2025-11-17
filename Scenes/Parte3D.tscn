@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://c5qen6x4qlwpp" path="res://addons/godOSC/scripts/OSCServer.gd" id="4_fgk7x"]
 [ext_resource type="Script" uid="uid://cmsfbjl6la3xs" path="res://Scripts/OSC/Recibidor_Botones.gd" id="4_qnoio"]
 [ext_resource type="PackedScene" uid="uid://qb3xg6mjwdj8" path="res://modelo/corinto.tscn" id="5_60j7f"]
-[ext_resource type="PackedScene" uid="uid://cwjjmyargy83c" path="res://Cinematicas/cinematica_0.tscn" id="6_gffnd"]
+[ext_resource type="PackedScene" uid="uid://bfsm8hy6fayxw" path="res://Cinematicas/cinematica_1.tscn" id="7_gffnd"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_x7o8p"]
 
@@ -59,7 +59,7 @@ metadata/_custom_type_script = "uid://c5qen6x4qlwpp"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 
-[node name="Cinematica0" parent="." instance=ExtResource("6_gffnd")]
-
 [node name="Corinto" parent="." instance=ExtResource("5_60j7f")]
 visible = false
+
+[node name="Cinematica1" parent="." instance=ExtResource("7_gffnd")]

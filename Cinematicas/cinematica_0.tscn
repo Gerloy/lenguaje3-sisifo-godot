@@ -13,6 +13,11 @@ albedo_texture = ExtResource("2_hufp6")
 
 [node name="Cinematica0" type="Node3D"]
 script = ExtResource("1_vigdd")
+nombre = "cinematica 0"
+imgs = Array[String](["00", "01", "02", "03"])
+tiempos_imagenes = Array[float]([4.0, 13.0, 3.0, 10.0])
+nombre_audios = Array[String](["AudioZeus", "AudioThanatos"])
+tiempos_inicio_audios = Array[float]([0.0, 17.0])
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(32, 0, 0, 0, -1.3987644e-06, -32, 0, 32, -1.3987644e-06, -61.914417, 21.292458, 18.256565)
