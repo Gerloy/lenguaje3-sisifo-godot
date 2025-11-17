@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://wtxcbe2fthch"]
+
+[ext_resource type="Script" uid="uid://1ssblbcx4egk" path="res://Scripts/Cinematicas/Cinematica.gd" id="1_5uk70"]
+[ext_resource type="Texture2D" uid="uid://cl4ijq177jcc2" path="res://Images/cinematicas/cinematica3/00.png" id="2_5uk70"]
+[ext_resource type="AudioStream" uid="uid://twithvwuhoja" path="res://audios/narraciones/3-Narración-voz-etérea.mp3" id="3_k5ua8"]
+[ext_resource type="AudioStream" uid="uid://cx4ct2epgp4ph" path="res://audios/narraciones/6-Tánatos.mp3" id="4_5uk70"]
+[ext_resource type="AudioStream" uid="uid://bo0v2xgp4bcem" path="res://audios/narraciones/7-Sonido-final.mp3" id="5_5uk70"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_s1tfl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q0hrc"]
+transparency = 1
+albedo_texture = ExtResource("2_5uk70")
+
+[node name="Cinematica3" type="Node3D"]
+script = ExtResource("1_5uk70")
+nombre = "cinematica3"
+imgs = Array[String](["00"])
+tiempos_imagenes = Array[float]([20.0])
+nombre_audios = Array[String](["AudioThanatos", "AudioThanatos2"])
+tiempos_inicio_audios = Array[float]([1.0, 11.0])
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(32, 0, 0, 0, -1.3987644e-06, -32, 0, 32, -1.3987644e-06, -61.914417, 21.292458, 18.256565)
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_s1tfl")
+surface_material_override/0 = SubResource("StandardMaterial3D_q0hrc")
+
+[node name="Audios" type="Node" parent="."]
+
+[node name="AudioZeus" type="AudioStreamPlayer3D" parent="Audios"]
+stream = ExtResource("3_k5ua8")
+
+[node name="AudioThanatos" type="AudioStreamPlayer3D" parent="Audios"]
+stream = ExtResource("4_5uk70")
+
+[node name="AudioThanatos2" type="AudioStreamPlayer3D" parent="Audios"]
+stream = ExtResource("5_5uk70")

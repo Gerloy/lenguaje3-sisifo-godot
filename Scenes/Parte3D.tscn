@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://caxjxiqy5vjpk"]
+[gd_scene load_steps=9 format=3 uid="uid://caxjxiqy5vjpk"]
 
 [ext_resource type="Script" uid="uid://s5ugrpk4rfw4" path="res://addons/cardboard_vr/scripts/cardboard_vr_camera.gd" id="1_ixo6g"]
 [ext_resource type="Script" uid="uid://do7vdefcs6tmm" path="res://Scripts/OSC/Cambiar_Pos.gd" id="2_qnoio"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://c5qen6x4qlwpp" path="res://addons/godOSC/scripts/OSCServer.gd" id="4_fgk7x"]
 [ext_resource type="Script" uid="uid://cmsfbjl6la3xs" path="res://Scripts/OSC/Recibidor_Botones.gd" id="4_qnoio"]
 [ext_resource type="PackedScene" uid="uid://qb3xg6mjwdj8" path="res://modelo/corinto.tscn" id="5_60j7f"]
+[ext_resource type="PackedScene" uid="uid://wtxcbe2fthch" path="res://Cinematicas/cinematica_3.tscn" id="7_gffnd"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_x7o8p"]
 
@@ -60,3 +61,5 @@ metadata/_custom_type_script = "uid://c5qen6x4qlwpp"
 
 [node name="Corinto" parent="." instance=ExtResource("5_60j7f")]
 visible = false
+
+[node name="Cinematica3" parent="." instance=ExtResource("7_gffnd")]
