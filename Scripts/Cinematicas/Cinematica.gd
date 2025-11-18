@@ -49,8 +49,8 @@ func _process(_delta: float) -> void:
 		t = 0;
 		if index_imgs < texturas.size():
 			mesh.get_surface_override_material(0).albedo_texture = texturas[index_imgs];
-		#else:
-		#	Globales.cambiarEstado();
+		else:
+			Globales.cambiarEstado();
 	#if t_total >= 4:
 	#	audio_zeus.play();
 	#if t_total >= 19 and !audio_thanatos.playing:

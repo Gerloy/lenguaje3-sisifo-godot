@@ -12,8 +12,8 @@ func _process(_delta: float) -> void:
 		#print(target_server.incoming_messages);
 		if target_server.incoming_messages[osc_address][0] != 0:
 			#print('Llego decision');
-			if Globales.map_activado:
-				Globales.cambiarEstado();
+			#if Globales.map_activado:
+			Globales.cambiarEstado();
 	if target_server.incoming_messages.has("/piedra"):
 		Globales.moverPiedra();
 		#if Globales.map_activado:

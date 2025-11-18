@@ -1,16 +1,37 @@
-[gd_scene load_steps=9 format=3 uid="uid://caxjxiqy5vjpk"]
+[gd_scene load_steps=16 format=3 uid="uid://caxjxiqy5vjpk"]
 
+[ext_resource type="PackedScene" uid="uid://rm7c4iaqkw2x" path="res://modelo/castigo.tscn" id="1_fgk7x"]
 [ext_resource type="Script" uid="uid://s5ugrpk4rfw4" path="res://addons/cardboard_vr/scripts/cardboard_vr_camera.gd" id="1_ixo6g"]
 [ext_resource type="Script" uid="uid://do7vdefcs6tmm" path="res://Scripts/OSC/Cambiar_Pos.gd" id="2_qnoio"]
 [ext_resource type="Script" uid="uid://ckalovjb1exn" path="res://Scripts/OSC/recibidor_z.gd" id="3_gffnd"]
 [ext_resource type="Script" uid="uid://c5qen6x4qlwpp" path="res://addons/godOSC/scripts/OSCServer.gd" id="4_fgk7x"]
 [ext_resource type="Script" uid="uid://cmsfbjl6la3xs" path="res://Scripts/OSC/Recibidor_Botones.gd" id="4_qnoio"]
-[ext_resource type="PackedScene" uid="uid://qb3xg6mjwdj8" path="res://modelo/corinto.tscn" id="5_60j7f"]
-[ext_resource type="PackedScene" uid="uid://wtxcbe2fthch" path="res://Cinematicas/cinematica_3.tscn" id="7_gffnd"]
+[ext_resource type="Texture2D" uid="uid://c15ek47v2gtdw" path="res://Images/skybox/skybox.png" id="6_qnoio"]
+[ext_resource type="Texture2D" uid="uid://pfio127p2s5o" path="res://modelo/Castigo/Rock060_2K-JPG_Color.jpg" id="8_60j7f"]
+[ext_resource type="Script" uid="uid://bmejpq6byoqfq" path="res://Scripts/Roquita.gd" id="9_60j7f"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_x7o8p"]
 
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_qnoio"]
+panorama = ExtResource("6_qnoio")
+
+[sub_resource type="Sky" id="Sky_fgk7x"]
+sky_material = SubResource("PanoramaSkyMaterial_qnoio")
+
+[sub_resource type="Environment" id="Environment_60j7f"]
+background_mode = 2
+sky = SubResource("Sky_fgk7x")
+
+[sub_resource type="SphereMesh" id="SphereMesh_c0fby"]
+radius = 75.0
+height = 150.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vvjde"]
+albedo_texture = ExtResource("8_60j7f")
+
 [node name="Prueba" type="Node3D"]
+
+[node name="castigo" parent="." instance=ExtResource("1_fgk7x")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.7692548, 0.5812194, -0.2653886, 0.15269656, -0.5705516, -0.8069416, -0.6204281, 0.58021975, -0.52764964, 55.104115, 49.22081, 64.14933)
@@ -21,7 +42,7 @@ directional_shadow_fade_start = 0.192
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.45153, 25.033726, 73.051094)
 
 [node name="CardboardVRCamera3D" type="Camera3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.116817, 0, -10.514206)
+fov = 90.0
 script = ExtResource("1_ixo6g")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
@@ -30,36 +51,51 @@ shape = SubResource("SphereShape3D_x7o8p")
 disabled = true
 
 [node name="AudioListener3D" type="AudioListener3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.45153, -14.911281, -73.051094)
 
 [node name="RecibidorX" type="Node" parent="CharacterBody3D" node_paths=PackedStringArray("target_server")]
 script = ExtResource("2_qnoio")
-target_server = NodePath("../../recibe_posicion/OSCServer")
+target_server = NodePath("../recibe_posicion/OSCServer")
 osc_address = "/posx"
 metadata/_custom_type_script = "uid://cmwfmotwtrkgg"
 
 [node name="RecibidorZ" type="Node" parent="CharacterBody3D" node_paths=PackedStringArray("target_server")]
 script = ExtResource("3_gffnd")
-target_server = NodePath("../../recibe_posicion/OSCServer")
+target_server = NodePath("../recibe_posicion/OSCServer")
 osc_address = "/posz"
 metadata/_custom_type_script = "uid://cmwfmotwtrkgg"
 
 [node name="Recibidor_Botones" type="Node" parent="CharacterBody3D" node_paths=PackedStringArray("target_server")]
 script = ExtResource("4_qnoio")
-target_server = NodePath("../../recibe_posicion/OSCServer")
+target_server = NodePath("../recibe_posicion/OSCServer")
 osc_address = "/decision"
 metadata/_custom_type_script = "uid://cmwfmotwtrkgg"
 
-[node name="recibe_posicion" type="Node" parent="."]
+[node name="recibe_posicion" type="Node" parent="CharacterBody3D"]
 
-[node name="OSCServer" type="Node" parent="recibe_posicion"]
+[node name="OSCServer" type="Node" parent="CharacterBody3D/recibe_posicion"]
 script = ExtResource("4_fgk7x")
 port = 9000
 metadata/_custom_type_script = "uid://c5qen6x4qlwpp"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 
-[node name="Corinto" parent="." instance=ExtResource("5_60j7f")]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_60j7f")
+
+[node name="Final_Piedra" type="Node3D" parent="."]
+unique_name_in_owner = true
 visible = false
 
-[node name="Cinematica3" parent="." instance=ExtResource("7_gffnd")]
+[node name="Roquita" type="MeshInstance3D" parent="Final_Piedra" node_paths=PackedStringArray("fin", "pj")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -38.11236, 78.52751, 77.42186)
+mesh = SubResource("SphereMesh_c0fby")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_vvjde")
+script = ExtResource("9_60j7f")
+fin = NodePath("../Fin")
+vel = 2.0
+rad = 20.0
+pj = NodePath("../../CharacterBody3D")
+
+[node name="Fin" type="Node3D" parent="Final_Piedra"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -34.979004, 382.14288, 434.42126)

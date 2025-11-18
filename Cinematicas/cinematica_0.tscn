@@ -12,6 +12,7 @@ transparency = 1
 albedo_texture = ExtResource("2_hufp6")
 
 [node name="Cinematica0" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -55.663)
 script = ExtResource("1_vigdd")
 nombre = "cinematica 0"
 imgs = Array[String](["00", "01", "02", "03"])
@@ -29,6 +30,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_fgk7x")
 
 [node name="AudioZeus" type="AudioStreamPlayer3D" parent="Audios"]
 stream = ExtResource("3_yn6o2")
+max_distance = 200.0
 
 [node name="AudioThanatos" type="AudioStreamPlayer3D" parent="Audios"]
 stream = ExtResource("4_1hf45")
+max_distance = 200.0
