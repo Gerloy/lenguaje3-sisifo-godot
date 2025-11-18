@@ -8,6 +8,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	var piedrita_mueve = false;
 	if target_server.incoming_messages.has(osc_address):
 		#print(target_server.incoming_messages);
 		if target_server.incoming_messages[osc_address][0] != 0:
@@ -15,7 +16,8 @@ func _process(_delta: float) -> void:
 			#if Globales.map_activado:
 			Globales.cambiarEstado();
 	if target_server.incoming_messages.has("/piedra"):
-		Globales.moverPiedra();
+		piedrita_mueve = true;
 		#if Globales.map_activado:
 		#	Globales.cambiarEstado();
+	Globales.moverPiedra(piedrita_mueve);
 	pass

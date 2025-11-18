@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://bm3rcjgspe3um" path="res://Images/cinematicas/Tanatos.png" id="1_aegrg"]
 
-
 [sub_resource type="PlaneMesh" id="PlaneMesh_teq2u"]
 size = Vector2(25, 25)
 
