@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://brksdsf84lgr4"]
+[gd_scene load_steps=5 format=3 uid="uid://brksdsf84lgr4"]
 
 [ext_resource type="PackedScene" uid="uid://bdb8uuuc6kbvw" path="res://modelo/Inframundo/Inframundo.gltf" id="1_husgm"]
+[ext_resource type="PackedScene" uid="uid://brfksvvml6p4q" path="res://modelo/Objetos/cadena.gltf" id="2_vqc0b"]
+[ext_resource type="PackedScene" uid="uid://b3f1l12eo6wbq" path="res://modelo/Objetos/moneda.gltf" id="3_6hm60"]
+[ext_resource type="PackedScene" uid="uid://d05owat5pj165" path="res://modelo/Objetos/reloj.gltf" id="4_6vlvj"]
 
 [node name="Inframundo" instance=ExtResource("1_husgm")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -100.121, -76.949, -28.472)
@@ -19,3 +22,14 @@ light_size = 0.549
 light_specular = 3.817
 light_bake_mode = 1
 spot_angle = 66.09375
+
+[node name="objetos" type="Node" parent="." index="23"]
+
+[node name="cadena" parent="objetos" index="0" instance=ExtResource("2_vqc0b")]
+transform = Transform3D(0.05, 0, 0, 0, -2.1855695e-09, -0.05, 0, 0.05, -2.1855695e-09, -66.81589, 20.116924, 13.746784)
+
+[node name="moneda" parent="objetos" index="1" instance=ExtResource("3_6hm60")]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -32.18882, 19.627262, 16.033894)
+
+[node name="reloj" parent="objetos" index="2" instance=ExtResource("4_6vlvj")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -48.565166, 19.805317, 11.8957615)

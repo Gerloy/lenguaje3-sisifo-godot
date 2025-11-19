@@ -1,5 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://qb3xg6mjwdj8"]
+[gd_scene load_steps=5 format=3 uid="uid://qb3xg6mjwdj8"]
 
 [ext_resource type="PackedScene" uid="uid://df4sy7pgremtg" path="res://modelo/corinto/Corinto.gltf" id="1_0jv8j"]
+[ext_resource type="PackedScene" uid="uid://brfksvvml6p4q" path="res://modelo/Objetos/cadena.gltf" id="2_4a8a5"]
+[ext_resource type="PackedScene" uid="uid://b3f1l12eo6wbq" path="res://modelo/Objetos/moneda.gltf" id="3_g8e7g"]
+[ext_resource type="PackedScene" uid="uid://d05owat5pj165" path="res://modelo/Objetos/reloj.gltf" id="4_ilc4o"]
 
 [node name="Corinto" instance=ExtResource("1_0jv8j")]
+
+[node name="objetos" type="Node" parent="." index="82"]
+
+[node name="cadena" parent="objetos" index="0" instance=ExtResource("2_4a8a5")]
+transform = Transform3D(0.05, 0, 0, 0, -2.1855695e-09, -0.05, 0, 0.05, -2.1855695e-09, -28.706066, 20.77799, 5.7730923)
+
+[node name="moneda" parent="objetos" index="1" instance=ExtResource("3_g8e7g")]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -69.90261, 19.627262, 8.901103)
+
+[node name="reloj" parent="objetos" index="2" instance=ExtResource("4_ilc4o")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -48.565166, 19.805317, 11.8957615)

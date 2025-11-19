@@ -52,7 +52,11 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	match estado:
 		ESTADOS.no_empezo: # Esto lo tengo que cambiar cuando toque
-			#map.queue_free();
+			if map:
+				map.queue_free();
+			map = load(cinematicas[0]).instantiate();
+			get_node("/root/Prueba").add_child(map);
+			skybox.environment.sky.sky_material.panorama = sky_noche;
 			#map = load(mapas[0]).instantiate();
 			#get_node("/root/Prueba").add_child(map);
 			#skybox.environment.sky.sky_material.panorama = sky_comun;
@@ -140,6 +144,6 @@ func cambiarEstado():
 			estado = ESTADOS.no_empezo;
 			#get_tree().reload_current_scene();
 
-func moverPiedra(_val:bool):
+func moverPiedra(_val:int):
 	get_node("/root/Prueba/Final_Piedra/Roquita").prendida = _val;
 	pass

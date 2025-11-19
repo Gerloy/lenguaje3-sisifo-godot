@@ -15,8 +15,8 @@ func _process(_delta: float) -> void:
 			#print('Llego decision');
 			#if Globales.map_activado:
 			Globales.cambiarEstado();
-	if target_server.incoming_messages.has("/piedra"):
-		piedrita_mueve = true;
+	if (Globales.estado == Globales.ESTADOS.castigo) and (target_server.incoming_messages.has("/piedra")):
+		piedrita_mueve = target_server.incoming_messages["/piedra"][0];
 		#if Globales.map_activado:
 		#	Globales.cambiarEstado();
 	Globales.moverPiedra(piedrita_mueve);
