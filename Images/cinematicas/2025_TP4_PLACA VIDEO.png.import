@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpor5x4g84k0x"
-path.s3tc="res://.godot/imported/2025_TP4_PLACA VIDEO.png-96b6502c62cf83bc7362a23d1969338b.s3tc.ctex"
-path.etc2="res://.godot/imported/2025_TP4_PLACA VIDEO.png-96b6502c62cf83bc7362a23d1969338b.etc2.ctex"
+path.s3tc="res://.godot/imported/2025_TP4_PLACA VIDEO.png-e556543c7aecf69b9bc97d829ec68ea7.s3tc.ctex"
+path.etc2="res://.godot/imported/2025_TP4_PLACA VIDEO.png-e556543c7aecf69b9bc97d829ec68ea7.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Images/cinematicas/LogoFacultad/2025_TP4_PLACA VIDEO.png"
-dest_files=["res://.godot/imported/2025_TP4_PLACA VIDEO.png-96b6502c62cf83bc7362a23d1969338b.s3tc.ctex", "res://.godot/imported/2025_TP4_PLACA VIDEO.png-96b6502c62cf83bc7362a23d1969338b.etc2.ctex"]
+source_file="res://Images/cinematicas/2025_TP4_PLACA VIDEO.png"
+dest_files=["res://.godot/imported/2025_TP4_PLACA VIDEO.png-e556543c7aecf69b9bc97d829ec68ea7.s3tc.ctex", "res://.godot/imported/2025_TP4_PLACA VIDEO.png-e556543c7aecf69b9bc97d829ec68ea7.etc2.ctex"]
 
 [params]
 
