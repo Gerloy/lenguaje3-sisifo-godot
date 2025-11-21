@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dcx7hbcrt3erf"
+path="res://.godot/imported/silence (48000 Hz).wav-dbb8628c2a35a53e3af87888a32d8f42.sample"
+
+[deps]
+
+source_file="res://audios/silence (48000 Hz).wav"
+dest_files=["res://.godot/imported/silence (48000 Hz).wav-dbb8628c2a35a53e3af87888a32d8f42.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
