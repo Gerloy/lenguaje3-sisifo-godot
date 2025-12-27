@@ -9,5 +9,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if target_server.incoming_messages.has(osc_address):
-		pj.position = Vector3(target_server.incoming_messages[osc_address][0],pj.position.y,pj.position.z);;
+		if Globales.estado != Globales.ESTADOS.castigo or !get_node("/root/Prueba/Final_Piedra/Roquita").prendida:
+			pj.position = Vector3(target_server.incoming_messages[osc_address][0],pj.position.y,pj.position.z);;
 	pass

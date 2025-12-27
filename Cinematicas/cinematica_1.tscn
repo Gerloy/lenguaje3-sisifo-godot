@@ -31,9 +31,12 @@ surface_material_override/0 = SubResource("StandardMaterial3D_cuwxh")
 
 [node name="AudioZeus" type="AudioStreamPlayer3D" parent="Audios"]
 stream = ExtResource("3_d3xyb")
+volume_db = 20.0
 
 [node name="AudioThanatos" type="AudioStreamPlayer3D" parent="Audios"]
 stream = ExtResource("4_d3xyb")
+volume_db = 20.0
 
 [node name="AudioThanatos2" type="AudioStreamPlayer3D" parent="Audios"]
 stream = ExtResource("5_riwxi")
+volume_db = 20.0

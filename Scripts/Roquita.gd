@@ -31,7 +31,7 @@ func _process(_delta: float) -> void:
 				#prendida = false;
 		else:
 			dir = (pos_base - get_position()).normalized();
-			var mov = dir*vel;
+			var mov = dir*vel*4;
 			set_position(get_position()+mov);
 			pj.set_position(pj.get_position()+mov);
 			if get_position().distance_to(pos_base) <= rad:
@@ -42,8 +42,11 @@ func _process(_delta: float) -> void:
 	else:
 		if get_position().distance_to(pos_base) > rad:
 			dir = (pos_base - get_position()).normalized();
-			var mov = dir*vel;
+			var mov = dir*vel*4;
 			set_position(get_position()+mov);
 			pj.set_position(pj.get_position()+mov);
+		#elif !ascenso:
+		#	prendida = false;
+		#	Globales.cambiarEstado();
 			
 	pass

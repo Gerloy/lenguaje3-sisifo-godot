@@ -11,8 +11,8 @@ func _process(_delta: float) -> void:
 	#print(target_server.incoming_messages);
 	if target_server.incoming_messages.has(osc_address):
 		#print(target_server.incoming_messages);
-		#if Globales.estado != Globales.ESTADOS.castigo or get_node("/root/Prueba/Final_Piedra/Roquita"):
-		pj.position = Vector3(pj.position.x,pj.position.y,target_server.incoming_messages[osc_address][0]);
+		if Globales.estado != Globales.ESTADOS.castigo or !get_node("/root/Prueba/Final_Piedra/Roquita").prendida:
+			pj.position = Vector3(pj.position.x,pj.position.y,target_server.incoming_messages[osc_address][0]);
 	#	pass;
 	pass
 	pass

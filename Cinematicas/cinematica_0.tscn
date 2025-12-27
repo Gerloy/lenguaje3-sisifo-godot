@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cwjjmyargy83c"]
 
-[ext_resource type="Script" uid="uid://1ssblbcx4egk" path="res://Scripts/cinematicas/Cinematica.gd" id="1_vigdd"]
+[ext_resource type="Script" uid="uid://1ssblbcx4egk" path="res://Scripts/Cinematicas/Cinematica.gd" id="1_vigdd"]
 [ext_resource type="Texture2D" uid="uid://d1amsa0qg82yb" path="res://Images/cinematicas/cinematica 0/00.png" id="2_hufp6"]
 [ext_resource type="AudioStream" uid="uid://da4vanice4ahl" path="res://audios/narraciones/1-Zeus.mp3" id="3_yn6o2"]
 [ext_resource type="AudioStream" uid="uid://ctoila6n3qa5f" path="res://audios/narraciones/2-Tánatos.mp3" id="4_1hf45"]
@@ -30,8 +30,10 @@ surface_material_override/0 = SubResource("StandardMaterial3D_fgk7x")
 
 [node name="AudioZeus" type="AudioStreamPlayer3D" parent="Audios"]
 stream = ExtResource("3_yn6o2")
+volume_db = 20.0
 max_distance = 200.0
 
 [node name="AudioThanatos" type="AudioStreamPlayer3D" parent="Audios"]
 stream = ExtResource("4_1hf45")
+volume_db = 20.0
 max_distance = 200.0

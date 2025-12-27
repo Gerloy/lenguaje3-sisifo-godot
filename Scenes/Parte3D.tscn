@@ -31,7 +31,7 @@ albedo_texture = ExtResource("8_60j7f")
 [node name="Prueba" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.7692548, 0.5812194, -0.2653886, 0.15269656, -0.5705516, -0.8069416, -0.6204281, 0.58021975, -0.52764964, 55.104115, 49.22081, 64.14933)
+transform = Transform3D(0.23339503, -0.77260095, 0.5904361, 0.89339453, -0.06934364, -0.4438898, 0.38389248, 0.63109386, 0.67405266, 55.104115, 49.22081, 64.14933)
 directional_shadow_split_1 = 0.172
 directional_shadow_fade_start = 0.192
 
@@ -82,17 +82,16 @@ environment = SubResource("Environment_60j7f")
 
 [node name="Final_Piedra" type="Node3D" parent="."]
 unique_name_in_owner = true
-visible = false
 
 [node name="Roquita" type="MeshInstance3D" parent="Final_Piedra" node_paths=PackedStringArray("fin", "pj")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -38.11236, 78.52751, 77.42186)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -38.11235, 65.62154, 147.07253)
 mesh = SubResource("SphereMesh_c0fby")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_vvjde")
 script = ExtResource("9_60j7f")
 fin = NodePath("../Fin")
-vel = 2.0
-rad = 20.0
+vel = 0.25
+rad = 6.0
 pj = NodePath("../../CharacterBody3D")
 
 [node name="Fin" type="Node3D" parent="Final_Piedra"]

@@ -10,10 +10,10 @@
 [node name="objetos" type="Node" parent="." index="82"]
 
 [node name="cadena" parent="objetos" index="0" instance=ExtResource("2_4a8a5")]
-transform = Transform3D(0.05, 0, 0, 0, -2.1855695e-09, -0.05, 0, 0.05, -2.1855695e-09, -28.706066, 20.77799, 5.7730923)
+transform = Transform3D(0.05, 0, 0, 0, -2.1855695e-09, -0.05, 0, 0.05, -2.1855695e-09, -66.242874, 20.77799, 6.368721)
 
 [node name="moneda" parent="objetos" index="1" instance=ExtResource("3_g8e7g")]
-transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -69.90261, 19.627262, 8.901103)
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -31.491371, 19.627262, 8.901103)
 
 [node name="reloj" parent="objetos" index="2" instance=ExtResource("4_ilc4o")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -48.565166, 19.805317, 11.8957615)
